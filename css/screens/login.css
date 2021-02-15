@@ -1,0 +1,83 @@
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;
+  /* display flex도 있지만 텍스트는 이렇게 해도 됨 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* header, h1, p를 inspect해서 보면 다 센터로 만들어주기 위해 flex */
+}
+
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.welcome-header__text {
+  width: 60%;
+  /* 일정 길이 이상 줄바꾸기 */
+  opacity: 0.7;
+}
+
+/* .login-form__input {
+  
+  }
+  .login-form__btn {
+  
+  }
+  .login-form__a{
+  
+  } 이렇게 bem을 써도 되고 밑에처럼 써도 됨.*/
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+#login-form input {
+  border: none;
+  padding: 15px 0px;
+  font-size: 18px;
+
+  margin-bottom: 20px;
+  /* input:focus {
+      outline: none;
+  } 이건 reset파일에 해서 모든 인풋에 적용되도록 했음*/
+}
+
+#login-form input:not([type="submit"]) {
+  /* []사이에 쓰인 것들은 특성 선택자(attribute selector) 
+      cascading 속성주의. #login-form input:focus {border-color: var(--yellow);
+  } 아래에 이 구문을 쓰면 적용 안될수도 있음.*/
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  /* black에 opacity 0.3 
+      따로 input엔 class를 적용 안하고 함.*/
+  transition: border-color 0.3s ease-in-out;
+  /* border-color가 이쁘게 바뀌도록 */
+}
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+  border-color: var(--yellow);
+}
+
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  /* pointer 말고도 progress, notallow도 있음 */
+  padding: 20px 0px;
+  /* 버튼 위아래에 padding을 줘서 늘림 */
+  border-radius: 5px;
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  /* 밑줄 없앰 */
+  color: inherit;
+  /* 모든 링크에는 기본값으로 blue가 들어가있음. 부모인 login-form에서 색을 상속*/
+  font-size: 13px;
+}

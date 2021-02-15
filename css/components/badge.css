@@ -1,0 +1,13 @@
+.badge {
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  /* 원을 만들고 싶으면 크기의 절반을 주면 됨 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display:block 후 text-align: center하면 정 중앙엔 안옴. 왜지?;; */
+  color: white;
+  font-weight: 600;
+}

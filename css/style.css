@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+/* css를 이용해 추가하는게 더 좋음. html은 link를 여러 줄 만들어야함.
+import 파일 순서 중요함. 변수를 못쓸수도 있음 */
+@import "reset.css";
+@import "variables.css";
+
+/* Components */
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/user-component.css";
+@import "components/badge.css";
+@import "components/icon-row.css";
+@import "components/alt-screen-header.css";
+@import "components/no-mobile.css";
+
+/* Screens */
+@import "screens/login.css";
+@import "screens/friends.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
+
+body {
+  color: #2e363e;
+  /* 전체 기본값으로 색 설정 */
+  font-family: "Open Sans", sans-serif;
+  height: 1000vh;
+}
+/* style.css파일에는 font-family와 같이 모든 스크린에 적용될 수 있는 스타일을 써놓는 편 */
+.main-screen {
+  padding: 0px var(--horizontal-space);
+}
+/* 모든 화면에서 쓸 수 있도록 여기에 설정. chat부분에서 설정함. */
+
+.exclamation-mark {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 1.5px solid red;
+  font-size: 13px;
+  color: red;
+  text-align: center;
+  margin-left: 5px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
